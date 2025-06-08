@@ -1,17 +1,13 @@
 import express from 'express';
-import { port } from './config/index.js';
-import loader from './loaders/index.js';
+import expressLoader from './loaders/express.js';
 
 const app = express();
 
-loader(app);
+// Jalankan express loader (middleware, routes, dll)
+expressLoader(app);
 
-app.listen(port, err => {
-  if (err) {
-    console.log(err);
-    return process.exit(1);
-  }
-  console.log(`Server is running on ${port}`);
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`🚀 Server listening on http://localhost:${port}`);
 });
-
-export default app

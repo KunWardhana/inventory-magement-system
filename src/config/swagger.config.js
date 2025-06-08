@@ -1,5 +1,5 @@
 export default {
-  swaggerDefinition: {
+  definition: {
     openapi: '3.0.0',
     info: {
       title: 'Nodejs-Starter-Template API',
@@ -15,7 +15,7 @@ export default {
         email: 'bahricanyesil@gmail.com',
       },
     },
-    basePath: '/api',
+    // basePath tidak dipakai di OpenAPI 3, pakai servers saja
     servers: [
       {
         url: 'http://localhost:3000/api/',
@@ -24,8 +24,8 @@ export default {
   },
   tags: [
     {
-      "name": "User",
-      "description": "API for users"
+      name: 'User',
+      description: 'API for users'
     }
   ],
   apis: [
