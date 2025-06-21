@@ -29,7 +29,7 @@ export default (app) => {
   app.get('/input', (_req, res) => {
       res.render('input', {
         user: {
-          name: 'Admin Dummy', // or req.session.user if available
+          name: 'Admin Dummy',
           role: 'admin'
         }
       });
@@ -55,7 +55,7 @@ export default (app) => {
         },
       });
   
-      return res.redirect('/dashboard'); // or wherever you want to go after input
+      return res.redirect('/dashboard'); 
     });
 
   // Route default
