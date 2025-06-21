@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Input Produk - Admin</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <style>
+    body {
+      background: url("/images/bg_login_signup.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding-top: 60px;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ffc107;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .btn-warning {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2><i class="fa fa-plus-square"></i> Tambah Data Produk</h2>
+    <form action="/input" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Nama Produk</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Kategori</label>
+        <select name="category" class="form-control" required>
+          <option value="Accessories">Accessories</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Elektronik">Elektronik</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Harga (IDR)</label>
+        <input type="number" name="price" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Jumlah Terjual</label>
+        <input type="number" name="quantity" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="branch">Cabang</label>
+        <input type="text" name="branch" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Gambar Produk</label>
+        <input type="file" name="image" class="form-control" accept="image/*" required>
+      </div>
+
+      <button type="submit" class="btn btn-warning btn-block">Simpan Produk</button>
+    </form>
+  </div>
+</body>
+</html>

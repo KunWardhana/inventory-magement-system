@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <style>
+    body {
+      background: url("/images/bg_login_signup.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .dashboard-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .dashboard-title {
+      color: #ffc107;
+      margin-bottom: 30px;
+    }
+
+    .kpi-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #ffc107;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .kpi-value {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ffc107;
+    }
+
+    .kpi-label {
+      font-size: 14px;
+      color: #eee;
+    }
+
+    .chart-placeholder {
+      background-color: rgba(255, 255, 255, 0.1);
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+    }
+
+    table {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    th, td {
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(255, 193, 7, 0.4);
+      color: #000;
+    }
+
+    a.btn-logout {
+      margin-top: 20px;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container dashboard-container">
+    <h1 class="dashboard-title"><i class="fa fa-dashboard"></i> Dashboard</h1>
+
+    <div class="row">
+        <div class="col-sm-4">
+          <h4 style="color:#ffc107;">Aksesori Terlaris</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr><th>Nama Produk</th><th>Terjual</th><th>Total (IDR)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Gelang</td><td>320 pcs</td><td>Rp 96.000.000</td></tr>
+              <tr><td>Kontol</td><td>275 pcs</td><td>Rp 82.500.000</td></tr>
+              <tr><td>Gatau gw kontol</td><td>190 pcs</td><td>Rp 57.000.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <div class="col-sm-4">
+          <h4 style="color:#ffc107;">Cabang dengan Penjualan Tertinggi</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr><th>Cabang</th><th>Total Penjualan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Jakarta</td><td>Rp 128.000.000</td></tr>
+              <tr><td>Bandung</td><td>Rp 105.000.000</td></tr>
+              <tr><td>Surabaya</td><td>Rp 98.000.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <div class="col-sm-4">
+          <h4 style="color:#ffc107;">Aksesori Terlaris per Cabang</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr><th>Cabang</th><th>Produk Terlaris</th><th>Jumlah</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Jakarta</td><td>Jam Tangan Kulit</td><td>145 pcs</td></tr>
+              <tr><td>Bandung</td><td>Kacamata Hitam</td><td>120 pcs</td></tr>
+              <tr><td>Surabaya</td><td>Tas Slempang</td><td>90 pcs</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+
+    <a href="/logout" class="btn-logout">Logout</a>
+  </div>
+</body>
+</html>
