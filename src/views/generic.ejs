@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Dashboard - <%= user?.name || user?.email %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="/">QX Inventory</a></h1>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <div class="inner">
+          <h2>Menu</h2>
+          <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/generic">Dashboard</a></li>
+            <li><a href="/elements">Elements</a></li>
+            <li><a href="/homepage">Logout</a></li>
+          </ul>
+          <p>Logged in as <strong><%= user?.name || user?.username || user?.email %></strong></p>
+          <a href="#" class="close">Close</a>
+        </div>
+      </nav>
+
+      <!-- Wrapper -->
+      <section id="wrapper">
+        <header>
+          <div class="inner">
+            <h2>Dashboard</h2>
+            <p>Selamat datang, <%= user?.name || user?.email %>!</p>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wrapper">
+          <div class="inner">
+            <h3 class="major">Informasi Akun</h3>
+            <ul>
+              <li><strong>Nama:</strong> <%= user?.name || '-' %></li>
+              <li><strong>Email:</strong> <%= user?.email || '-' %></li>
+              <li><strong>Username:</strong> <%= user?.username || '-' %></li>
+              <li><strong>Status:</strong> <%= user?.isActivated ? 'Aktif' : 'Tidak aktif' %></li>
+            </ul>
+
+            <hr />
+
+            <h3 class="major">Fitur Tersedia</h3>
+            <section class="features">
+              <article>
+                <a href="#" class="image"><img src="/images/pic04.jpg" alt="Fitur 1" /></a>
+                <h3 class="major">Kelola Barang</h3>
+                <p>Lihat dan atur stok barang di seluruh toko.</p>
+                <a href="#" class="special">Masuk</a>
+              </article>
+              <article>
+                <a href="#" class="image"><img src="/images/pic05.jpg" alt="Fitur 2" /></a>
+                <h3 class="major">Laporan Penjualan</h3>
+                <p>Cek performa penjualan harian hingga bulanan.</p>
+                <a href="#" class="special">Lihat</a>
+              </article>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <div class="inner">
+          <h2 class="major">Hubungi Kami</h2>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field">
+                <label for="name">Nama</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Pesan</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Kirim Pesan" /></li>
+            </ul>
+          </form>
+          <ul class="contact">
+            <li class="icon solid fa-home">
+              QX Inventory<br />
+              Jl. Utama No.123<br />
+              Jakarta, Indonesia
+            </li>
+            <li class="icon solid fa-phone">(021) 123-4567</li>
+            <li class="icon solid fa-envelope"><a href="#">support@qxid.com</a></li>
+            <li class="icon brands fa-instagram"><a href="#">@qxinventory</a></li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; QX Inventory. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
